@@ -1,0 +1,35 @@
+﻿<Window x:Class="_111.Windows.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_111.Windows"
+        mc:Ignorable="d"
+        FontFamily="Comic Sans MS"
+        FontSize="20"
+        Title="Авторизация" Height="450" Width="500" MaxHeight="550" MaxWidth="700">
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image Source="/Assets/ОК_cut-photo.ru.png"
+                   Width="150"
+                   Stretch="UniformToFill"></Image>
+            <Label />
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Width="85">Логин:</TextBlock>
+                <TextBox Name="Login" Width="200"></TextBox>
+            </StackPanel>
+            <Label />
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Width="85">Пароль:</TextBlock>
+                <TextBox Name="Password"
+                         Width="200"></TextBox>
+            </StackPanel>
+            <Label />
+            <Button Name="Enter"
+                    Click="Enter_Click">Войти</Button>
+            <Label />
+            <Button Name="EnterAsGuest"
+                    Click="EnterAsGuest_Click">Войти как гость</Button>
+        </StackPanel>
+    </Grid>
+</Window>

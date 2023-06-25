@@ -1,0 +1,59 @@
+﻿<Window x:Class="_111.Windows.ProductsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_111.Windows"
+        mc:Ignorable="d"
+        FontFamily="Comic Sans MS"
+        FontSize="20"
+        Title="Продукты"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
+        Closed="Window_Closed">
+    <Grid Height="650"
+          Width="1300">
+        <StackPanel Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button VerticalAlignment="Center"
+                        Name="Back"
+                        Click="Back_Click">Назад</Button>
+                <TextBlock VerticalAlignment="Center"
+                           TextAlignment="Right"
+                           Width="100">Поиск:</TextBlock>
+                <TextBox Name="Search"
+                         VerticalAlignment="Center"
+                         Width="250"
+                         TextChanged="Search_TextChanged"></TextBox>
+                <TextBlock VerticalAlignment="Center"
+                           TextAlignment="Right"
+                           Width="150">Фильтрация:</TextBlock>
+                <ComboBox VerticalAlignment="Center"
+                          Name="Filter"
+                          Width="200"
+                          DropDownClosed="Filter_DropDownClosed"></ComboBox>
+                <TextBlock VerticalAlignment="Center"
+                           TextAlignment="Right"
+                           Width="150">Сортировка:</TextBlock>
+                <StackPanel Orientation="Vertical">
+                    <RadioButton Name="Asc"
+                                 Checked="Asc_Checked">/\</RadioButton>
+                    <RadioButton Name="Desc"
+                                 Checked="Desc_Checked">\/</RadioButton>
+                </StackPanel>
+                <Label Width="50" />
+                <Button Name="Order"
+                        Width="80"
+                        IsEnabled="False"
+                        VerticalAlignment="Center">Заказ</Button>
+            </StackPanel>
+            <ScrollViewer Height="550"
+                          Width="1300">
+                <StackPanel Width="1300"
+                            Name="Main"></StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Window>
